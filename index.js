@@ -1,18 +1,15 @@
-// ============================================================
-// index.js - MAIN ENTRY POINT FOR MASTER PROCESS
-// ============================================================
-// Run with: node index.js
-
+// Load environment variables first
 require('dotenv').config();
 
-// Initialize Discord bot (singleton, safe to call once)
-const { startDiscordBot } = require('./lib/discord-bot.js');
-const { startMasterDashboard } = require('./lib/master.js');
+// Now it’s safe to require other modules
+const discordBot = require('./discord-bot');
 
-// Start Discord bot (only in master process)
-startDiscordBot();
+// Your existing index.js code may go here, ensuring that any initialization is done after
+// loading the dotenv configuration.
 
-// Start master dashboard aggregator
-startMasterDashboard();
-
-console.log('✅ Master process initialized');
+// Example of initialization after loading .env variables:
+const someConfiguration = { /* your settings */ }; // ensure initialization happens after
+const runBot = () => {
+    // Bot running logic
+};
+runBot();
