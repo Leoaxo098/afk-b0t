@@ -1,0 +1,7 @@
+{
+  "dashboard": {
+    "mergedPort": 3000,
+    "password": "admin"
+  },
+  "bots": []
+}
