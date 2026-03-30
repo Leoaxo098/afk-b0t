@@ -2,9 +2,9 @@ require('dotenv').config();
 const path = require('path');
 const mineflayer = require('mineflayer');
 const { pathfinder } = require('mineflayer-pathfinder');
-// const viewer = require('./lib/viewer.js');
 const monitor = require('./lib/monitor.js');
 const dashboard = require('./lib/dashboard.js');
+const viewer = require('./lib/viewer.js');
 
 const botId = process.env.BOT_ID;
 let bot;
